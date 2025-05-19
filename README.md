@@ -109,9 +109,7 @@ where avg_profit_per_transaction = 0.1% of average transaction value
 - Fixed logic to account for both 'success' and 'successful' transaction statuses.
 - Customers with no transactions or zero tenure were handled using conditional logic and COALESCE.
 
-Notes
-All SQL scripts are clean, commented, and optimized for readability and performance.
-
+**Notes**
 Only successful inflow transactions were considered for financial accuracy.
 
 All values remain in their original units without conversion.
