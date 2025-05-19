@@ -110,6 +110,7 @@ where avg_profit_per_transaction = 0.1% of average transaction value
 - Customers with no transactions or zero tenure were handled using conditional logic and COALESCE.
 
 **Notes**
+
 Only successful inflow transactions were considered for financial accuracy.
 
 All values remain in their original units without conversion.
