@@ -22,8 +22,12 @@ Identify customers who have both at least one funded savings plan and one funded
 - Sorted by total deposits in descending order.
 
 **Challenges:**
-- Clarifying what "funded" meant required checking transaction status and positive amounts. Ensuring null values didn’t affect the sums or counts was handled with COALESCE.
+- Clarifying what "funded" meant required checking transaction status and positive amounts.
+- Ensuring null values didn’t affect the sums or counts.
 
+**Solutions**
+- Null values were handled with COALESCE.
+- Fixed logic to account for both 'success' and 'successful' transaction statuses.
 ---
 
 **Q2: Transaction Frequency Analysis**
@@ -98,11 +102,12 @@ where avg_profit_per_transaction = 0.1% of average transaction value
 - Ordered customers by estimated CLV in descending order.
 
 **Challenges:**
-- Some customers had no transactions or zero tenure; these edge cases were handled using conditional logic and COALESCE.
+- Some customers had no transactions or zero tenure.
 - CLV going null due to missing or filtered transactions.
 
 **Solution:**
-Fixed logic to account for both `'success'` and `'successful'` transaction statuses.
+- Fixed logic to account for both 'success' and 'successful' transaction statuses.
+- Customers with no transactions or zero tenure were handled using conditional logic and COALESCE.
 
 Notes
 All SQL scripts are clean, commented, and optimized for readability and performance.
